@@ -1,0 +1,23 @@
+<!--
+    Structural directives shape or reshape the DOM's structure, typically by adding, removing, and manipulating the elements to which they are attached. 
+    Any directive with an * is a structural directive.
+-->
+<h2 class="productListHeading">Products</h2>
+<div *ngFor="let product of products; index as productId" class="productListContent">
+    <div class="card-container card-container-custom">
+        <div class="card card-custom">
+            <h3 class="eachProductColor">
+                <a [title]="product.name + ' details'" [routerLink]="['/products', product.id]">
+                    {{ product.name }}
+                </a>
+            </h3>
+            <p *ngIf="product.description">
+                <strong>Description:</strong> {{ product.description }}
+            </p>
+            <button (click)="share()" class="productListShareBtn">
+                Share
+            </button>
+            <app-product-alerts [product]="product" (notify)="onNotify()"></app-product-alerts>
+        </div>
+    </div>
+</div>
