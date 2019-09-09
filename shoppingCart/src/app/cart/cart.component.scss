@@ -1,0 +1,50 @@
+.cart-item {
+    padding: 2%;
+    background-color: #fafafa;
+    margin: 1%;
+    border-radius: 4px;
+    border: 1px solid #eee;
+    width: 50%;
+}
+.spanB {
+    float: right;
+    font-weight: bold;
+}
+.spanA {
+    font-weight: bold;
+}
+.productListShareBtn {
+    background-color: #1976d2;
+    color: white;
+    border-color: #1976d2;
+    padding: 2%;
+    border-radius: 4px;
+    font-weight: bold;
+    height: 40px;
+    width: 50%;
+    cursor: pointer;
+}
+.submit-btn {
+    background-color: #1976d2;
+    color: white;
+    border-color: #1976d2;
+    padding: 2%;
+    border-radius: 4px;
+    font-weight: bold;
+    height: 40px;
+    cursor: pointer;
+}
+.cart-btn {
+    width: 50%;
+    padding: 2%;
+    margin: 1%;
+    display: flex;
+    flex-basis: 100%;
+    flex-wrap: wrap;
+}
+.cartDiv {
+    flex-basis: 50%;
+}
+.btnFloat {
+    float: right;
+}

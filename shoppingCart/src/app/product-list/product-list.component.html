@@ -3,7 +3,7 @@
     Any directive with an * is a structural directive.
 -->
 <h2 class="productListHeading">Products</h2>
-<div *ngFor="let product of products; index as productId" class="productListContent">
+<div *ngFor="let product of products" class="productListContent">
     <div class="card-container card-container-custom">
         <div class="card card-custom">
             <h3 class="eachProductColor">
@@ -17,7 +17,8 @@
             <button (click)="share()" class="productListShareBtn">
                 Share
             </button>
-            <app-product-alerts [product]="product" (notify)="onNotify()"></app-product-alerts>
+            <app-product-alerts [product]="product" (notify)="onNotify()"></app-product-alerts>        
         </div>
     </div>
 </div>
+

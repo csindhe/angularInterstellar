@@ -4,3 +4,8 @@ export interface product {
     description?: string,
     price?: number;
 }
+
+export interface shipping {
+    type: string,
+    price: number
+}

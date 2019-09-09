@@ -8,12 +8,12 @@ import { productList } from '../shoppingData/product-data';
   styleUrls: ['./product-list.component.scss']
 })
 export class ProductListComponent implements OnInit {
-  products: product[] = [];
+  products: product[] = productList;
 
   constructor() { }
 
   ngOnInit() {
-    this.products = productList;
+    //this.products = productList;
   }
 
   share() {

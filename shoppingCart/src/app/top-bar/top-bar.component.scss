@@ -1,5 +1,35 @@
 .topBarHeading {
     margin-top: 0% !important;
     margin-bottom: 0% !important;
-    padding: 3%;
+    padding: 1%;
+    width: 80%;
+    cursor: pointer;
+}
+.topBarDiv {
+    padding: 1%;
+    display: flex;
+}
+.checkoutBtn {
+    background-color: white;
+    color: #1976d2;
+    border-color: white;
+    padding: 1%;
+    border-radius: 4px;
+    font-weight: bold;
+    width: 30%;
+    cursor: pointer;
+    float: right;
+    margin: 1%;
+    font-size: 14px;
+}
+.divA {
+    flex-basis: 60%;
+    display: flex;
+    flex-wrap: wrap;
+}
+.divB {
+    flex-basis: 40%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-end;
 }
