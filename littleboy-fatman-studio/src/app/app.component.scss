@@ -1,0 +1,51 @@
+.title-span {
+    font-family: aliens;
+    font-size: 40px;
+    font-weight: normal;
+    transform: translateX(17%);
+    animation: 2s ease-out 0s 1 slideInFromLeft;
+}
+.toolbar {
+    order: 0;
+    height: 7vh;
+    background: rgb(131,58,180);
+    background: linear-gradient(90deg, rgba(131,58,180,1) 0%, rgba(253,29,29,1) 50%, rgba(252,176,69,1) 100%);
+    position: fixed;
+    z-index: 1;
+    width: 100%;
+    top: 0;
+    animation: 2s ease-out 0s 1 slideInFromTop;
+}
+.toolbar-logo {
+    width: 4%;
+    position: absolute;
+    left: 0%;
+    top: 8%;
+    margin: 0%;
+    opacity: 1 !important;
+    animation: 2s ease-out 0s 1 disapparateLogo; //slideInFromTop;
+}
+svg#rocket {
+    width: 130px;
+    position: absolute;
+    left: -10px;
+    top: 0px;
+    display: none;
+}
+#Ellipse_8{
+    transform: translate(7%, 11%); //translate(10px, 12px);
+    fill: transparent;
+    animation: 2s ease-out 0s 1 slideInFromTopCircle;
+}
+.routerbody {
+    height: 90vh;
+    flex-basis: 100%;
+    order: 1;
+    position: relative;
+    top: 7vh;
+}
+.container {
+    display: flex;
+    flex-basis: 100%;
+    flex-wrap: wrap;
+}
