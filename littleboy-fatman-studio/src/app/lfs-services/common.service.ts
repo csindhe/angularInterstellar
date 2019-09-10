@@ -5,12 +5,11 @@ import { HttpClient } from '@angular/common/http';
   providedIn: 'root'
 })
 export class CommonService {
+  uri = "http://localhost:4000";
 
   constructor(private http: HttpClient) { }
 
-  getUser() {
-    return this.http.get('http://localhost:8080/api/getUser/').subscribe((response) => {
-      console.log(response);
-    });
+  getComments() {
+    return this.http.get(`${this.uri}/home`);
   }
 }

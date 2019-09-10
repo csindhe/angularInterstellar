@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { CommonService } from 'src/app/lfs-services/common.service';
+import { comments } from 'src/app/lfs-data/lfs-data-model';
 
 @Component({
   selector: 'app-lfs-home',
@@ -7,11 +8,13 @@ import { CommonService } from 'src/app/lfs-services/common.service';
   styleUrls: ['./lfs-home.component.scss']
 })
 export class LfsHomeComponent implements OnInit {
-
-  constructor(private httpService: CommonService) { }
+  
+  constructor(private http: CommonService) { }
 
   ngOnInit() {
-    console.log(this.httpService.getUser());
+    /*this.http.getComments().subscribe((data: comments[]) => {
+      console.log(data);
+    });*/
   }
 
 }

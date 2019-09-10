@@ -1,5 +1,5 @@
 export interface comments {
-    _id: string,
+    _id: any,
     name: string,
     email: string,
     movie_id: string,
