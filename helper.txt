@@ -4,4 +4,7 @@ mongo "mongodb+srv://littleboyfatmanstudio-lehcq.mongodb.net/test" --username cs
 
 mongodb+srv://csindhe:<password>@littleboyfatmanstudio-lehcq.mongodb.net/test
 
-mongoimport --db lbfms_movies_photos --collection users --file D:/mockdata/users.json --jsonArray
+mongoimport --db lbfms_movies_photos --collection comments --file D:/dbData/1.json --jsonArray
+
+
+mongodb+srv://csindhe:astronic8@littleboyfatmanstudio-lehcq.mongodb.net/test?retryWrites=true&w=majority

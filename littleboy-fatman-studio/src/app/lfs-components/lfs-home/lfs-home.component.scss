@@ -1,1 +1,16 @@
-.aa { content:"\f008"; }
+.home-container {
+    display: flex;
+    flex-basis: 100%;
+    flex-wrap: wrap;
+}
+.fm-image {
+    border-radius: 50%;
+    transition: 1s width 0s;
+    width:  50%;
+}
+.fm-image:hover {
+    width: 100%;
+    box-shadow: 0 4px 17px rgba(0, 0, 0, 0.35);
+    transition: 1s width 0s;
+    cursor: pointer;
+}
