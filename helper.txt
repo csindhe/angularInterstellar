@@ -1,10 +1,13 @@
-mongoexport --host littleboyfatmanstudio-shard-0/littleboyfatmanstudio-shard-00-00-lehcq.mongodb.net:27017,littleboyfatmanstudio-shard-00-01-lehcq.mongodb.net:27017,littleboyfatmanstudio-shard-00-02-lehcq.mongodb.net:27017 --ssl --username csindhe --password astronic8 --authenticationDatabase admin --db sample_mflix --collection comments --type json --out moviecomments
+mongoexport --host littleboyfatmanstudio-shard-0/littleboyfatmanstudio-shard-00-00-lehcq.mongodb.net:27017,littleboyfatmanstudio-shard-00-01-lehcq.mongodb.net:27017,littleboyfatmanstudio-shard-00-02-lehcq.mongodb.net:27017 --ssl --username csindhe --password astronic8 --authenticationDatabase admin --db sample_mflix --collection comments --type jsonArray --out moviecomments
 
 mongo "mongodb+srv://littleboyfatmanstudio-lehcq.mongodb.net/test" --username csindhe
 
 mongodb+srv://csindhe:<password>@littleboyfatmanstudio-lehcq.mongodb.net/test
 
-mongoimport --db lbfms_movies_photos --collection comments --file D:/dbData/1.json --jsonArray
+mongoimport --db lbfms_movies_photos --collection movies --file D:/dbData/2.json
 
 
 mongodb+srv://csindhe:astronic8@littleboyfatmanstudio-lehcq.mongodb.net/test?retryWrites=true&w=majority
+
+
+mongoexport --db sample_mflix --collection comments --out output.json

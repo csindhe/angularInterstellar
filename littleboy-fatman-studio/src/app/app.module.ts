@@ -7,16 +7,23 @@ import { AppComponent } from './app.component';
 import { LfsHomeComponent } from './lfs-components/lfs-home/lfs-home.component';
 import { HttpClientModule } from '@angular/common/http';
 
+import { LfsPagenotfoundComponent } from './lfs-components/lfs-pagenotfound/lfs-pagenotfound.component';
+import { LittlboyfatmanModule } from './lfs-router-services/littlboyfatman.module';
+import { UrbancandidsModule } from './lfs-router-services/urbancandids.module';
+
 @NgModule({
   declarations: [
     AppComponent,
-    LfsHomeComponent
+    LfsHomeComponent,
+    LfsPagenotfoundComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule,
     ReactiveFormsModule,
-    HttpClientModule
+    HttpClientModule,
+    LittlboyfatmanModule,
+    UrbancandidsModule,
+    AppRoutingModule
   ],
   providers: [],
   bootstrap: [AppComponent]

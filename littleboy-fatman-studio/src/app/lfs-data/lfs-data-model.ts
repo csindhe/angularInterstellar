@@ -14,6 +14,7 @@ export interface movie {
     runtime: number,
     rated: string,
     cast: string[],
+    num_mflix_comments: number,
     title: string,
     fullplot: string,
     languages: string[],

@@ -2,15 +2,21 @@
     display: flex;
     flex-basis: 100%;
     flex-wrap: wrap;
+    transform: translateY(30%);
+    height: 50vh;
+}
+.photography-container, .filmmaking-container {
+    flex-basis: 50%;
+    text-align: center;
 }
 .fm-image {
     border-radius: 50%;
-    transition: 1s width 0s;
+    animation: reverseRotateLogo 1s ease-out 0s 1, reverseTransformLogo 1s ease-out 0s 1;
     width:  50%;
 }
 .fm-image:hover {
     width: 100%;
     box-shadow: 0 4px 17px rgba(0, 0, 0, 0.35);
-    transition: 1s width 0s;
+    animation: rotateLogo 1s ease-out 0s 1, transformLogo 1s ease-out 0s 1;
     cursor: pointer;
 }

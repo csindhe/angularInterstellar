@@ -12,7 +12,7 @@
 }
 .title-span {
     font-family: aliens;
-    font-size: 2.5rem;
+    font-size: 4.0rem;
     font-weight: normal;
     //transform: translateX(17%);
     animation: 1s ease-out 0s 1 slideInFromTop; //slideInFromLeft;
@@ -65,20 +65,7 @@ svg#rocket {
     fill: transparent;
     animation: 2s ease-out 0s 1 slideInFromTopCircle;
 }
-.routerbody {
+.router-container {
+    margin-top: 10vh;
     height: 90vh;
-    display: flex;
-    flex-basis: 100%;
-    order: 1;
-    padding-top: 10vh;
-    margin: 0.5%;
-    /* position: relative; */
-    /* top: 7vh; */
-}
-.container {
-    display: flex;
-    flex-basis: 100%;
-    flex-wrap: wrap;
-    height: 100vh;
-    //background-image: url('/assets/images/appbackground.jpg')
 }

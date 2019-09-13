@@ -9,7 +9,7 @@ export class CommonService {
 
   constructor(private http: HttpClient) { }
 
-  getComments() {
-    return this.http.get(`${this.uri}/home`);
+  getMovies() {
+    return this.http.get(`${this.uri}/getMovies`);
   }
 }

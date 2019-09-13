@@ -15,7 +15,7 @@ mongoose.connect(config.DB, { useNewUrlParser: true }).then(
 const app = express();
 app.use(bodyParser.json());
 app.use(cors());
-app.use('/home', movieRoute);
+app.use('/getMovies', movieRoute);
 let port = process.env.port || 4000;
 const server = app.listen(port, '127.0.0.1', function() {
     console.log('Listening to Port ' + port);

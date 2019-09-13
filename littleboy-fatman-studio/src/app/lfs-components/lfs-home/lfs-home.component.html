@@ -1,8 +1,42 @@
-<div class="content" role="main">
+<style>
+@keyframes rotateLogo {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+}
+@keyframes reverseRotateLogo {
+    0% {
+      transform: rotate(360deg);
+    }
+    100% {
+      transform: rotate(0deg);
+    }
+}
+@keyframes transformLogo {
+    0% {
+      width: 50%;
+    }
+    100% {
+      width: 100%;
+    }
+}
+@keyframes reverseTransformLogo {
+    0% {
+      width: 100%;
+    }
+    100% {
+      width: 50%;
+    }
+}
+</style>
+<div class="home-container" role="main">
     <div class="filmmaking-container">
-        <img class="fm-image" src="assets/images/filmmaking.jpg" alt="Filmmaking related works">
+        <img class="fm-image" src="assets/images/filmmaking.jpg" alt="Filmmaking related works" routerLink="/littleboyfatman/home">
     </div>
     <div class="photography-container">
-        <img class="fm-image" src="assets/images/filmmaking.jpg" alt="Filmmaking related works">
+        <img class="fm-image" src="assets/images/filmmaking.jpg" alt="Filmmaking related works" routerLink="/urbancandids/home">
     </div>
 </div>
