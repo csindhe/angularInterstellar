@@ -1,5 +1,4 @@
 import { Injectable } from '@angular/core';
-import { movie } from 'src/app/lfs-data/lfs-data-model';
 import { Resolve, Router, ActivatedRouteSnapshot, RouterStateSnapshot } from '@angular/router';
 import { CommonService } from 'src/app/lfs-services/common.service';
 import { Observable, of, EMPTY }  from 'rxjs';
@@ -12,7 +11,7 @@ export class HomePageResolverService implements Resolve<any> {
 
   constructor(private service: CommonService, private router: Router) { }
 
-  resolve(route: ActivatedRouteSnapshot, state: RouterStateSnapshot): Observable<any> {
+  resolve(route: ActivatedRouteSnapshot, state: RouterStateSnapshot): Observable<any> | Observable<never> {
     return this.service.getMovies().pipe(
       take(1),
       mergeMap(data => {
@@ -23,6 +22,6 @@ export class HomePageResolverService implements Resolve<any> {
           return EMPTY;
         }
       })
-    );
+    )
   }
 }

@@ -1,0 +1,57 @@
+.lbfm-home-container {
+    display: flex;
+    flex-basis: 100%;
+    flex-wrap: wrap;
+    padding: 1%;
+}
+.movie-card {
+    height: 95%;
+    width: 95%;
+    display: flex;
+    flex-basis: 100%;
+    flex-wrap: wrap;
+    background-size: 100%;
+    padding: 0%
+}
+.loop-div {
+    height: 400px;
+    width: 25%;
+}
+.card-img-top {
+    width: 100%
+}
+.card-head {
+    flex-basis: 100%;
+    order: 0;
+    height: 60%;
+}
+.card-body {
+    flex-basis: 100%;
+    order: 1;
+    height: 40%;
+    background-color: white;
+}
+.card-title {
+    font-family: beautymountain;
+    font-size: 3rem;
+    text-align: center;
+    flex-basis: 100%;
+    order: 0
+}
+.card-rating {
+    display: flex;
+    justify-content: center;
+    flex-basis: 100%;
+    order: 1;
+    margin: 4% 0 4% 0;
+    font-size: xx-large;
+}
+.card-btn {
+    display: flex;
+    justify-content: center;
+    flex-basis: 100%;
+    order: 2;
+}
+.router-container {
+    height: auto !important;
+}

@@ -1,1 +1,26 @@
-<p>lbfm-home works!</p>
+<div class="lbfm-home-container" role="main">
+    <div *ngFor="let movie of movieData" class="loop-div">
+        <div class="card movie-card" [ngStyle]="setImageStyle(movie)">
+            <div class="card-head"> 
+                <!--<img class="card-img-top" src="" alt="Card image cap">-->
+            </div>
+            <div class="card-body">
+                <h5 class="card-title">{{ movie.title }}</h5>
+                <span class="card-rating">
+                    <div *ngFor="let i of arr(calculateFullStars(movie)).fill(1)">
+                        <i class="fa fa-star" aria-hidden="true"></i>
+                    </div>
+                    <div *ngFor="let i of arr(calculateHalfStars(movie)).fill(1)">
+                        <i class="fa fa-star-half-o" aria-hidden="true"></i>
+                    </div>
+                    <div *ngFor="let i of arr(calculateBlankStars(movie)).fill(1)">
+                        <i class="fa fa-star-o" aria-hidden="true"></i>
+                    </div>
+                </span>
+                <span class="card-btn">
+                    <a href="#" class="btn btn-primary">Go somewhere</a> 
+                </span>
+            </div>
+        </div>
+    </div>
+</div>

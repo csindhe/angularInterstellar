@@ -15,16 +15,16 @@ let comments = new schema({
 let movies = new schema({
     _id: {type: Object},
     plot: {type: String},
-    genres: {type: Array},
+    genres: {type: [String]},
     runtime: {type: Number},
-    cast: {type: Array},
+    cast: {type: [String]},
     num_mflix_comments: {type: Number},
     poster: {type: String},
     title: {type: String},
     fullplot: {type: String},
-    languages: {type: Array},
+    languages: {type: [String]},
     released: {type: Date},
-    directors: {type: Array},
+    directors: {type: [String]},
     rated: {type: String},
     awards: {
         wins: {type: Number},
@@ -38,7 +38,7 @@ let movies = new schema({
         votes: {type: Number},
         id: {type: Number}
     },
-    countries: {type: Array},
+    countries: {type: [String]},
     type: {type: String},
     tomatoes: {
         viewer: {

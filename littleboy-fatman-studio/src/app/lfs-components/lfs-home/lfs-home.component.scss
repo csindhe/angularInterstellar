@@ -20,3 +20,13 @@
     animation: rotateLogo 1s ease-out 0s 1, transformLogo 1s ease-out 0s 1;
     cursor: pointer;
 }
+.logo-font {
+    font-family: stripedfont;
+    font-size: 3rem;
+    font-weight: normal;
+    color: white;
+    /*background: rgb(131,58,180);
+    background: linear-gradient(90deg, rgba(131,58,180,1) 0%, rgba(253,29,29,1) 50%, rgba(252,176,69,1) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;*/
+}

@@ -10,12 +10,14 @@ import { HttpClientModule } from '@angular/common/http';
 import { LfsPagenotfoundComponent } from './lfs-components/lfs-pagenotfound/lfs-pagenotfound.component';
 import { LittlboyfatmanModule } from './lfs-router-services/littlboyfatman.module';
 import { UrbancandidsModule } from './lfs-router-services/urbancandids.module';
+import { LfsFooterComponent } from './lfs-components/lfs-footer/lfs-footer.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     LfsHomeComponent,
-    LfsPagenotfoundComponent
+    LfsPagenotfoundComponent,
+    LfsFooterComponent
   ],
   imports: [
     BrowserModule,
