@@ -6,7 +6,7 @@ mongodb+srv://csindhe:<password>@littleboyfatmanstudio-lehcq.mongodb.net/test
 
 mongoimport --db lbfms_movies_photos --collection movies --file D:/dbData/movies2.json
 
-mongoimport --db lbfms_movies_photos --collection movies --file D:/mockdata/movies2.json
+mongoimport --db lbfms_movies_photos --collection movies --file D:/dbData/movies2.json
 
 
 mongodb+srv://csindhe:astronic8@littleboyfatmanstudio-lehcq.mongodb.net/test?retryWrites=true&w=majority
