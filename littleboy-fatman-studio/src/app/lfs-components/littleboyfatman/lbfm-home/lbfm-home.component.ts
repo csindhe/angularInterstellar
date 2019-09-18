@@ -10,9 +10,10 @@ import { ActivatedRoute } from '@angular/router';
 export class LbfmHomeComponent implements OnInit {
   movieData: movie[];
   arr = Array;
+  starData: string[] = [];
 
   constructor(private route: ActivatedRoute) { }
-
+  
   ngOnInit() {
     this.route.data.subscribe((data: {movieData: movie[]}) => {
       this.movieData = data.movieData;
@@ -23,32 +24,32 @@ export class LbfmHomeComponent implements OnInit {
     let styles = {
       'background-image': 'url("' + movie.poster + '")'
     };
+    this.calculateTotalStar(movie);
     return styles;
   }
 
-  calculateFullStars(movie: movie): any {
-    let movieRating: number = movie.tomatoes.viewer.rating;
-    let interimVal = Math.round(movieRating);
-    let finalValue = (interimVal > movieRating) ? ((interimVal - movieRating) === 0.5) ? (movieRating - 0.5) : interimVal : Math.round(movieRating);
-    return finalValue;
-  }
-
-  calculateHalfStars(movie: movie): any {
-    let movieRating: number = movie.tomatoes.viewer.rating;
-    let ratingDiff: number = 5 - movieRating;
-    let roundedDiff: number = Math.round(ratingDiff);
-    let roundRateDiff = (roundedDiff > ratingDiff) ? (roundedDiff - ratingDiff) : (ratingDiff - roundedDiff);
-    let decimalDiff = (roundedDiff > ratingDiff) ? (roundedDiff > 1) ? 1 : roundedDiff : 0;
-    return decimalDiff; 
-  }
-
-  calculateBlankStars(movie: movie): any {
-    let movieRating: number = movie.tomatoes.viewer.rating;
-    let ratingDiff: number = 5 - movieRating;
-    let roundedDiff: number = Math.round(ratingDiff);
-    let decimalDiff = (roundedDiff > ratingDiff) ? (roundedDiff - ratingDiff) : (roundedDiff - ratingDiff);
-    let finalValue: number = (decimalDiff < 0.5 && decimalDiff > 0) ? 0 : (decimalDiff < 1 && decimalDiff > 0.5) ? 0 : (decimalDiff === 0.5) ? 1 : roundedDiff;  
-    return finalValue;
+  calculateTotalStar(movie: movie): void {
+    this.starData = [];
+    let fullStars: number = 0;
+    let halfStars: number= 0;
+    let noStars: number = 0;
+    let totalStars: number = 5;
+    let remainingStars: number = 0;
+    let currentRating: number = movie.imdb.rating;
+    let ratingRemainder: number = movie.imdb.rating % 2;
+    
+    fullStars = (currentRating - ratingRemainder) / 2;
+    remainingStars = totalStars - fullStars;
+    (ratingRemainder >= 1) ? halfStars = 1 : noStars = remainingStars;
+    for(let i = 0; i < fullStars; i++) {
+      this.starData.push('full');
+    }
+    for(let i = 0; i < halfStars; i++) {
+      this.starData.push('half');
+    }
+    for(let i = 0; i < noStars; i++) {
+      this.starData.push('zero');
+    }
   }
 
 }
